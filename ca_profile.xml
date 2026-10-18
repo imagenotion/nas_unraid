@@ -1,0 +1,11 @@
+<CommunityApplications>
+  <Profile>
+**Awacino** makes your Unraid server an unattended device: reach it, its terminal and its network from the Awacino app on your phone or computer, with no port forwarding and no router settings.
+
+This repository holds the Awacino Unraid template. Install it, paste the setup code from the Awacino app (Add unattended device → Install on NAS) and click Apply.
+
+Support: https://www.awacino.com/support/contact/
+  </Profile>
+  <Icon>https://www.awacino.com/images/favicon/Icon-180.png</Icon>
+  <WebPage>https://www.awacino.com/technology/unattended/#nas</WebPage>
+</CommunityApplications>

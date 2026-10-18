@@ -20,3 +20,9 @@ The image is `docker.awacino.net/awacino/unattended:latest` (amd64 and arm64).
 
 More: https://www.awacino.com/technology/unattended/#nas
 Support: https://www.awacino.com/support/contact/
+
+## Licence
+
+The files in this repository (template, profile, README) are MIT licensed, see
+`LICENSE`. The Awacino application and the container image are licensed
+separately: https://www.awacino.com/licence/
