@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- Unraid template for the Awacino unattended device.
+     Published from the Awacino source tree to github.com/imagenotion/nas_unraid;
+     edit it there (dev/awacino/docker/unraid), not in the public repo. -->
+<Container version="2">
+  <Name>awacino-unattended</Name>
+  <Repository>docker.awacino.net/awacino/unattended:latest</Repository>
+  <Registry>https://docker.awacino.net</Registry>
+  <TemplateURL>https://raw.githubusercontent.com/imagenotion/nas_unraid/main/awacino-unattended.xml</TemplateURL>
+  <Network>host</Network>
+  <Privileged>true</Privileged>
+  <Support>https://www.awacino.com/technology/unattended/</Support>
+  <Project>https://www.awacino.com</Project>
+  <Overview>Makes this Unraid server an Awacino unattended device: reach it, its terminal and its network from your phone or computer - no port forwarding. In the Awacino app choose "Add unattended device" -> "Install on NAS" and paste the setup code below.</Overview>
+  <Category>Network:Remote Tools:</Category>
+  <WebUI/>
+  <Icon>https://www.awacino.com/images/favicon/Icon-180.png</Icon>
+  <ExtraParams>--pid=host --cap-add=NET_ADMIN --restart=unless-stopped</ExtraParams>
+  <Config Name="Setup code" Target="AWACINO_SETUP_CODE" Default="" Mode="" Description="The setup code the Awacino app shows under Install on NAS. Used once; it may be removed after pairing." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data" Target="/opt/awabon" Default="/mnt/cache/appdata/awacino" Mode="rw" Description="Pairing, certificates and client updates. Keep it, or the server has to be paired again." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/cache/appdata/awacino</Config>
+</Container>
