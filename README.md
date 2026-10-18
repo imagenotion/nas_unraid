@@ -8,12 +8,13 @@ port forwarding and no router settings.
 
 1. In the Awacino app, open **Add unattended device → Install on NAS** and copy
    the setup code.
-2. In Unraid, open **Apps** and search for **Awacino** (Community Applications), then paste the setup code
-   and click **Apply**.
+2. In Unraid, open **Settings → Docker → Template Repositories**, add
+   `https://github.com/imagenotion/nas_unraid` and click **Save**.
+3. Open **Docker → Add Container**, choose **Template: awacino-unattended**,
+   paste the setup code and click **Apply**.
 
-Without Community Apps: save `awacino-unattended.xml` as
-`/boot/config/plugins/dockerMan/templates-user/my-awacino-unattended.xml`, then
-use **Docker → Add Container → Template: awacino-unattended**.
+Once Awacino is listed in Community Applications, you can also find it under
+**Apps** by searching for Awacino.
 
 The image is `docker.awacino.net/awacino/unattended:latest` (amd64 and arm64).
 
